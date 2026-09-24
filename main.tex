@@ -1,36 +1,36 @@
-% Rekonstruierte main.tex aus dem PDF "AP1 V36-1.pdf"
-% Universität Freiburg – Physiklabor für Anfänger*innen 1
 \documentclass[12pt,a4paper]{article}
-
-\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
 \usepackage[ngerman]{babel}
-\usepackage{lmodern}
-\usepackage{amsmath,amssymb,amsthm}
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage[a4paper,margin=3cm]{geometry}
-\usepackage{setspace}
-\usepackage{siunitx}
-\usepackage{booktabs}
-\usepackage{tabularx}
+\usepackage[T1]{fontenc}
 \usepackage{hyperref}
-\usepackage{cleveref}
-\usepackage{csquotes}
+\usepackage[ngerman]{cleveref}
+\usepackage{xurl}
+\usepackage{parskip}
+\hypersetup{hidelinks}
+\usepackage{siunitx}
+ 
+% Include Pictures
+\usepackage{graphicx, float}
+\graphicspath{{images/}}
 
-\onehalfspacing
+% Page setup
+\usepackage{geometry}
+\geometry{
+left=3cm,
+right=3cm,
+top=2cm,
+bottom=2cm
+}
+
+
+% Line hight
+\renewcommand{\baselinestretch}{1.25}
+
+% Parskip and parindent
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0.4em}
+\setlength{\parskip}{1ex}
 
-\sisetup{
-  locale = DE,
-  separate-uncertainty = true,
-  per-mode = symbol
-}
-
-\hypersetup{
-  hidelinks
-}
 
 \begin{document}
 
@@ -114,7 +114,7 @@ Um den Mittelwert der Schwingungen $\bar{T}_{10}$ zu bestimmen, messen wir fünf
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{abb02_histogramm_T10_luft.jpg}
+    \includegraphics[width=0.61\textwidth]{abb02_histogramm_T10_luft.jpg}
     \caption{Histogramm der Messung von $T_{10}$ mit Mittelwert (rot) und Standardabweichung (hellblau)}
     \label{fig:histogramm}
 \end{figure}
@@ -128,7 +128,7 @@ Um den Mittelwert einer Periodendauer $\bar{T}_L$ zu bestimmen, messen wir die S
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{abb03_periodendauer_luft.jpg}
+    \includegraphics[width=0.6\textwidth]{abb03_periodendauer_luft.jpg}
     \caption{Diagramm einer einzelnen Periodendauer für Luft gegen die Anzahl der gemessenen Perioden mit logarithmischer $x$-Achse, gewichtetem Mittelwert (rot) und Unsicherheiten (vertikale Balken)}
     \label{fig:luft-periodendauer}
 \end{figure}
@@ -154,7 +154,7 @@ Die Fehler der einzelnen Messungen berechnen sich durch
 \tag{2}
 \end{equation}
 
-Deutlich zu erkennen ist, dass die Messungen über viele Perioden eine geringere Unsicherheit pro Periode haben und den gewichteten Mittelwert $\bar{T}_L$ dominant beeinflussen und dadurch näher a $\bat{T}_L$Mittelwert liegen.
+Deutlich zu erkennen ist, dass die Messungen über viele Perioden eine geringere Unsicherheit pro Periode haben und den gewichteten Mittelwert $\bar{T}_L$ dominant beeinflussen und dadurch näher an $\bar{T}_L$ liegen.
 
 \subsubsection{Bestimmung des Adiabatenexponenten von Luft $\gamma_L$}
 
@@ -180,11 +180,11 @@ Um die Freiheitsgrade $f_L$ zu bestimmen, gehen wir statistisch vor. Der theoret
 \tag{5}
 \end{equation}
 
-Zur Visualisierung hilft folgender Graph. [einheitliche Farben verwenden]
+Zur Visualisierung hilft folgender Graph.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{abb04_gamma_freiheitsgrade_luft.jpg}
+    \includegraphics[width=0.6\textwidth]{abb04_gamma_freiheitsgrade_luft.jpg}
     \caption{Der Adiabatenexponent für verschiedene Freiheitsgrade $\gamma_f$ (blau) und unser errechneter Adiabatenexponent $\gamma_L$ (rot)}
     \label{fig:gamma-f-luft}
 \end{figure}
@@ -199,7 +199,7 @@ Mithilfe des $z$-Tests lässt sich veranschaulichen, welche Freiheitsgrade mit u
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{abb05_zwerte_luft.jpg}
+    \includegraphics[width=0.6\textwidth]{abb05_zwerte_luft.jpg}
     \caption{$z$-Werte für die jeweiligen $\gamma_f$ (grün), Signifikanzniveau $|z|=2$ (rot)}
     \label{fig:z-luft}
 \end{figure}
@@ -216,7 +216,7 @@ Wie in Abschnitt 3.2.2 führen wir Messungen der Schwingungsdauer für $n$ viele
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{abb06_periodendauer_helium.jpg}
+    \includegraphics[width=0.6\textwidth]{abb06_periodendauer_helium.jpg}
     \caption{Diagramm einer einzelnen Periodendauer für Helium gegen die Anzahl der Perioden mit logarithmischer $x$-Achse, gewichtetem Mittelwert (Farbe) und Unsicherheiten (vertikale Balken)}
     \label{fig:helium-periodendauer}
 \end{figure}
@@ -233,7 +233,7 @@ Auch hier arbeiten wir mit Gleichung (5), um die Freiheitsgrade $f_{\mathrm{He}}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{abb07_gamma_freiheitsgrade_helium.jpg}
+    \includegraphics[width=0.6\textwidth]{abb07_gamma_freiheitsgrade_helium.jpg}
     \caption{Adiabatenexponent gegen die Anzahl der Freiheitsgrade mit theoretischem Wert nach gegebener Formel (blau) und dem durch unsere Messungen berechneten (rot)}
     \label{fig:gamma-f-helium}
 \end{figure}
@@ -242,7 +242,7 @@ Es befindet sich kein ganzzahliger Wert $\gamma_f$ auf unserer Geraden für $\ga
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{abb08_zwerte_helium.jpg}
+    \includegraphics[width=0.6\textwidth]{abb08_zwerte_helium.jpg}
     \caption{$z$-Werte für die jeweiligen $\gamma_f$ (grün) mit Signifikanzniveau $|z|=2$ (rot)}
     \label{fig:z-helium}
 \end{figure}
@@ -334,146 +334,23 @@ Wir haben einige Verbesserungsvorschläge gesammelt, um eine präzisere Messung 
 
 Alle Autoren haben zu allen Inhalten des Protokolls zu gleichen Teilen beigetragen.
 
+\newpage
 \section{Anhang}
 
 \subsection{Gauß'scher Fehler für $\gamma_L$}
 
 Die allgemeine Formel lautet
-\begin{align}
-\Delta\gamma_L
-={}&
-\sqrt{
-\left(
-\frac{64V}{T^2d^4p}\Delta m
-\right)^2
-+
-\left(
-\frac{64m}{T^2d^4p}\Delta V
-\right)^2
-+
-\left(
--\frac{128Vm}{T^3d^4p}\Delta T
-\right)^2
-+
-\left[
-\left(
--\frac{256Vm}{T^2d^5p}
-\right)
-+
-\left(
-\frac{512Vm^2g}{\pi T^2d^7p^2}
-\right)
-^2
-(\Delta d)^2
-+
-\left(
--\frac{64Vm}{T^2d^4p^2}\Delta p
-\right)^2
-}}.
-\end{align}
 
 Mit
-\[
-p=p_L+\frac{4mg}{\pi d^2}
-\]
+
 ergibt sich nach Einsetzen der Größen
-\begin{align}
-\Delta\gamma_L
-={}&
-\Bigg[
-\left(
-\frac{64V}{T^2d^4\left(p_L+\frac{1.27gm}{d^2}\right)}
--\frac{81.49Vgm}{T^2d^6\left(p_L+\frac{1.27gm}{d^2}\right)^2}
-\right)\Delta m
-\Bigg]^2
-\nonumber\\
-&+
-\left(
--\frac{81.49Vm^2}{T^2d^6\left(p_L+\frac{1.27gm}{d^2}\right)^2}
-\Delta g
-\right)^2
-\nonumber\\
-&+
-\left(
-\frac{64m}{T^2d^4\left(p_L+\frac{1.27gm}{d^2}\right)}
-\Delta V
-\right)^2
-\nonumber\\
-&+
-\Bigg[
-\left(
--\frac{256Vm}{T^2d^5\left(p_L+\frac{1.27gm}{d^2}\right)}
-+
-\frac{162.97Vgm^2}{T^2d^7\left(p_L+\frac{1.27gm}{d^2}\right)^2}
-\right)
-\Delta d
-\Bigg]^2
-\nonumber\\
-&+
-\left(
--\frac{64Vm}{T^2d^4\left(p_L+\frac{1.27gm}{d^2}\right)^2}
-\Delta p_L
-\right)^2
-\nonumber\\
-&+
-\left(
--\frac{128Vm}{T^3d^4\left(p_L+\frac{1.27gm}{d^2}\right)}
-\Delta T
-\right)^2
-\Bigg]^{1/2}
-=0{,}01.
-\tag{7}
-\end{align}
+
 
 Einzelne Fehlerterme für Dominanzverhalten:
-\begin{align}
-m\text{-Term} &=
-\left(
-\frac{64V}{T^2d^4\left(p_L+\frac{1.27gm}{d^2}\right)}
--\frac{81.49Vgm}{T^2d^6\left(p_L+\frac{1.27gm}{d^2}\right)^2}
-\right)^2
-(\Delta m)^2
-=2\cdot10^{-6},
-\tag{8}\\
-V\text{-Term} &=
-\left(
-\frac{64m}{T^2d^4\left(p_L+\frac{1.27gm}{d^2}\right)}
-\Delta V
-\right)^2
-=4\cdot10^{-5},
-\\
-T\text{-Term} &=
-\left(
--\frac{128Vm}{T^3d^4\left(p_L+\frac{1.27gm}{d^2}\right)}
-\Delta T
-\right)^2
-=3\cdot10^{-7},
-\\
-d\text{-Term} &=
-\Bigg[
-\left(
--\frac{256Vm}{T^2d^5\left(p_L+\frac{1.27gm}{d^2}\right)}
-+\frac{162.97Vgm^2}{T^2d^7\left(p_L+\frac{1.27gm}{d^2}\right)^2}
-\right)
-\Delta d
-\Bigg]^2
-=7\cdot10^{-5},
-\\
-p\text{-Term} &=
-\left(
--\frac{64Vm}{T^2d^4\left(p_L+\frac{1.27gm}{d^2}\right)^2}
-\Delta p_L
-\right)^2
-=8\cdot10^{-8},
-\\
-g\text{-Term} &=
-\left(
--\frac{81.49Vm^2}{T^2d^6\left(p_L+\frac{1.27gm}{d^2}\right)^2}
-\Delta g
-\right)^2
-=3\cdot10^{-13}.
-\end{align}
-
+\begin{equation*}\Delta f = \sqrt{\left(\frac{\partial f}{\partial m}\,\Delta m\right)^2+\left(\frac{\partial f}{\partial g}\,\Delta g\right)^2+\left(\frac{\partial f}{\partial V}\,\Delta V\right)^2+\left(\frac{\partial f}{\partial d}\,\Delta d\right)^2+\left(\frac{\partial f}{\partial p_{L}}\,\Delta p_{L}\right)^2+\left(\frac{\partial f}{\partial T}\,\Delta T\right)^2}} \end{equation*}
+\begin{equation*}
+  
+\end{equation*}= \sqrt{\left(\frac{64 V}{T^{2} d^{4} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)} - \frac{81.49 V g m}{T^{2} d^{6} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)^{2}}\,\Delta m\right)^2+\left(- \frac{81.49 V m^{2}}{T^{2} d^{6} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)^{2}}\,\Delta g\right)^2+\left(\frac{64 m}{T^{2} d^{4} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)}\,\Delta V\right)^2+\left(- \frac{256 V m}{T^{2} d^{5} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)} + \frac{162.97 V g m^{2}}{T^{2} d^{7} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)^{2}}\,\Delta d\right)^2+\left(- \frac{64 V m}{T^{2} d^{4} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)^{2}}\,\Delta p_{L}\right)^2+\left(- \frac{128 V m}{T^{3} d^{4} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)}\,\Delta T\right)^2}}\end{equation*}
 \subsection{Gauß'scher Fehler für $\gamma_{\mathrm{He}}$}
 
 Einzelne Fehlerterme für Dominanzverhalten (gleiche Formeln wie Gleichung (8) und folgende):
@@ -544,6 +421,7 @@ Perioden $n$ & Dauer (s) & Periodendauer (s)\\
     \label{fig:anhang_Luft2}
 \end{figure}
 
+\newpage
 \section{Labornotizen}
 
 \end{document}
