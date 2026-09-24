@@ -19,8 +19,8 @@
 \geometry{
 left=3cm,
 right=3cm,
-top=2cm,
-bottom=2cm
+top=3cm,
+bottom=3cm
 }
 
 
@@ -48,7 +48,7 @@ bottom=2cm
 
     {\huge\bfseries Versuch 36\par}
     \vspace{0.5cm}
-    {\LARGE Adiabatenexponent\par}
+    {\LARGE \bf{Adiabatenexponent}\par}
 
     \vfill
 
@@ -75,9 +75,7 @@ Wir bestimmen die Adiabatenexponenten von Luft und Helium und deren Freiheitsgra
 
 \section{Versuchsdurchführung}
 
-Für den Aufbau nutzen wir einen Glaskolben mit Präzisionsrohr, in welchem sich ein Schwingkörper befindet. Das Rohr hat seitlich ein kleines Loch (1 in \cref{fig:versuchsaufbau}), durch welches Gas entweichen kann. Durch ein Nadelventil wird das jeweilige Gas oder Gasgemisch in den Kolben gepumpt, wodurch der Schwingkörper nach oben gedrückt wird. Sobald er sich über der Öffnung 1 befindet, kann das Gas dadurch entweichen und der Körper fällt wieder nach unten und schließt das Loch. Hierdurch entsteht eine näherungsweise harmonische Schwingung. Die Schwingdauern $T_n$ werden anhand des induzierten Stroms in einer an dem Präzisionsrohr angebrachten Spule gemessen.
-
-Im ersten Versuchsdurchgang wird der Adiabatenexponent $\gamma_L$ von Luft und dessen Freiheitsgrade $f_L$ durch $T_n$-Messungen über $n$ Perioden berechnet. Anschließend wird der Versuch mit Helium durchgeführt und es werden auf gleiche Weise $\gamma_{\mathrm{He}}$ sowie die Freiheitsgrade $f_{\mathrm{He}}$ bestimmt.
+Für den Aufbau nutzen wir einen Glaskolben mit Präzisionsrohr, in welchem sich ein Schwingkörper befindet. Das Rohr hat seitlich ein kleines Loch (1 in \cref{fig:versuchsaufbau}), durch welches Gas entweichen kann. Ein Nadelventil reguliert den Druck des jeweiligen Gasses oder Gasgemischs welches in den Kolben gelassen wird, wodurch der Schwingkörper nach oben gedrückt wird. Sobald er sich über der Öffnung 1 befindet, kann das Gas entweichen und der Körper fällt wieder nach unten und schließt das Loch. Hierdurch entsteht eine näherungsweise harmonische Schwingung. Die Schwingdauern $T_n$ werden anhand eines induzierten Stroms, welcher in einer an dem Präzisionsrohr angebrachten Spule gemessen wird.
 
 \begin{figure}[H]
     \centering
@@ -85,6 +83,8 @@ Im ersten Versuchsdurchgang wird der Adiabatenexponent $\gamma_L$ von Luft und d
     \caption{Versuchsaufbau}
     \label{fig:versuchsaufbau}
 \end{figure}
+
+Im ersten Versuchsdurchgang wird der Adiabatenexponent $\gamma_L$ von Luft und dessen Freiheitsgrade $f_L$ durch $T_n$-Messungen über $n$ Perioden berechnet. Anschließend wird der Versuch mit Helium durchgeführt und es werden auf gleiche Weise $\gamma_{\mathrm{He}}$ sowie die Freiheitsgrade $f_{\mathrm{He}}$ bestimmt.
 
 \section{Auswertung und Fehleranalyse}
 
@@ -106,11 +106,9 @@ $\Delta T=\SI{0.002}{s}$ (Rechtecksverteilung mit $2a=\SI{0.01}{s}$). Die mensch
 
 \subsection{Versuch mit Luft}
 
-Die Luftpumpe wird an das Nadelventil angeschlossen und füllt den Glaskolben.
-
 \subsubsection{Bestimmung der Schwingungsdauer von zehn Perioden $\bar{T}_{10}$}
 
-Um den Mittelwert der Schwingungen $\bar{T}_{10}$ zu bestimmen, messen wir fünfzig mal jeweils zehn Perioden $T_{10}$. Die Messdaten sind im folgendem Histogramm eingetragen.
+Um den Mittelwert der Schwingungen $\bar{T}_{10}$ zu bestimmen, messen wir fünfzig mal jeweils zehn Perioden $T_{10}$. Die Messdaten sind im folgendem Histogramm aufgetragen.
 
 \begin{figure}[H]
     \centering
@@ -121,7 +119,7 @@ Um den Mittelwert der Schwingungen $\bar{T}_{10}$ zu bestimmen, messen wir fünf
 
 Aufgrund der Form lässt sich eine Normalverteilung annehmen. Es werden rechnerisch der Mittelwert $\bar{T}_{10}=\SI{3.60}{s}$ 
 sowie die Standardabweichung $s_{T10}=\SI{0.084}{s}$ bestimmt.
-
+\label{sec:Unsicherheit}
 \subsubsection{Bestimmung der Periodendauer einer Schwingung $\bar{T}_L$}
 
 Um den Mittelwert einer Periodendauer $\bar{T}_L$ zu bestimmen, messen wir die Schwingungsdauer für mehrere verschiedene Periodenzahlen $n$ je einmal. Aus diesen Daten erhalten wir die Werte in Tabelle 1 und folgendem Diagramm.
@@ -144,29 +142,29 @@ Der gewichtete Mittelwert $\bar{T}_L$ lässt sich durch\footnote{Datenanalyse A,
 \]
 berechnen, was dem Wert $\bar{T}_L=\SI{0.39}{s}$ entspricht.
 
-Die Fehler der einzelnen Messungen berechnen sich durch
+Die Fehler der einzelnen Messungen berechnen sich durch unsere errechnete Unsicherheit aus \cref{sec:Unsicherheit} und unserer geschätzten Unsicherheit für das Stoppen der Messung.
 \begin{equation}
 \Delta T_n=
 \sqrt{
 \left(\frac{s_{T10}}{n}\right)^2+
 \left(\frac{\bar{T}_L}{n}\right)^2
-}.
+}
 \tag{2}
 \end{equation}
 
-Deutlich zu erkennen ist, dass die Messungen über viele Perioden eine geringere Unsicherheit pro Periode haben und den gewichteten Mittelwert $\bar{T}_L$ dominant beeinflussen und dadurch näher an $\bar{T}_L$ liegen.
+Deutlich zu erkennen ist, dass die Messungen, welche über viele Perioden gingen, eine geringere Unsicherheit pro Periode haben und den gewichteten Mittelwert $\bar{T}_L$ dominant beeinflussen. Dadurch liegen sie näher an $\bar{T}_L$.
 
 \subsubsection{Bestimmung des Adiabatenexponenten von Luft $\gamma_L$}
 
 Um den Adiabatenexponenten bestimmen zu können, nutzen wir die Formel\footnote{Schenk, Physikalisches Praktikum, Formel (43)}
 \begin{equation}
 \gamma=
-\frac{64mV}{\bar{T}^{\,2}d^4p}.
+\frac{64mV}{\bar{T}^{\,2}d^4p}
 \tag{3}
 \end{equation}
 mit\footnote{Schenk, Physikalisches Praktikum, Seite 136}
 \begin{equation}
-p=p_L+\frac{4mg}{\pi d^2}.
+p=p_L+\frac{4mg}{\pi d^2}
 \tag{4}
 \end{equation}
 
@@ -176,22 +174,22 @@ Durch diese Formel erhalten wir den Wert $\gamma_L=1{,}45\pm0{,}01$, wobei der F
 
 Um die Freiheitsgrade $f_L$ zu bestimmen, gehen wir statistisch vor. Der theoretische Wert des Adiabatenexponenten lässt sich errechnen durch
 \begin{equation}
-\gamma=\frac{f+2}{f}.
+\gamma_f=\frac{f+2}{f}.
 \tag{5}
 \end{equation}
 
-Zur Visualisierung hilft folgender Graph.
+Zur Visualisierung sind die Werte in folgendem Graph aufgetragen.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{abb04_gamma_freiheitsgrade_luft.jpg}
-    \caption{Der Adiabatenexponent für verschiedene Freiheitsgrade $\gamma_f$ (blau) und unser errechneter Adiabatenexponent $\gamma_L$ (rot)}
+    \caption{Der Adiabatenexponent $\gamma_f$ für verschiedene Freiheitsgrade $f$ (blau) und unser errechneter Adiabatenexponent $\gamma_L$ (rot)}
     \label{fig:gamma-f-luft}
 \end{figure}
 
 Wir erkennen hier, dass keiner der Freiheitsgrade auf unserem berechneten $\gamma_L$ liegt.
 
-Mithilfe des $z$-Tests lässt sich veranschaulichen, welche Freiheitsgrade mit unserem Adiabatenexponenten verträglich sind. Wir berechnen die $z$-Werte mit
+Mithilfe des $z$-Tests lässt sich veranschaulichen, welche Freiheitsgrade mit unserem Adiabatenexponenten am verträglichsten sind. Wir berechnen die $z$-Werte mit
 \begin{equation}
 |z|=\frac{|\bar{\gamma}-\gamma_f|}{\Delta\gamma}.
 \tag{6}
@@ -200,15 +198,15 @@ Mithilfe des $z$-Tests lässt sich veranschaulichen, welche Freiheitsgrade mit u
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{abb05_zwerte_luft.jpg}
-    \caption{$z$-Werte für die jeweiligen $\gamma_f$ (grün), Signifikanzniveau $|z|=2$ (rot)}
+    \caption{$z$-Werte für die jeweiligen $\gamma_f$ (blau), Signifikanzniveau (rot)}
     \label{fig:z-luft}
 \end{figure}
 
-Keiner der $z$-Werte liegt unterhalb des Signifikanzniveaus, es ist also kein Freiheitsgrad mit unserem Adiabatenexponenten für Luft vereinbar.
+Keiner der $z$-Werte liegt unterhalb des Signifikanzniveaus, es ist also kein Freiheitsgrad mit unserem Adiabatenexponenten für Luft vereinbar. Die Werte für $f_L = 4 \, \text{und} \,5$ liegen allerdings am nächsten zu $|z| = 2$
 
 \subsection{Versuch mit Helium}
 
-Nun wird der Glaskolben von der Luftpumpe getrennt und an die Heliumflasche angeschlossen. Allerdings messen wir jetzt direkt verschiedene Periodenzahlen, welche in Tabelle 2 einzusehen sind.
+Nun wird der Glaskolben von der Luftpumpe getrennt und an die Heliumflasche angeschlossen. Allerdings messen wir jetzt direkt verschiedene Periodenzahlen, welche in Tabelle 2 zu sehen sind. Für die erste Messung (über 600 Perioden) wurde der Glaskolben nicht vorher mit Helium gespült. Als uns das aufgefallen ist, haben wir es vor allen anderen Messungen bei Helium einmal getan.
 
 \subsubsection{Bestimmung der Periodendauer einer Schwingung $\bar{T}_{\mathrm{He}}$}
 
@@ -217,7 +215,7 @@ Wie in Abschnitt 3.2.2 führen wir Messungen der Schwingungsdauer für $n$ viele
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{abb06_periodendauer_helium.jpg}
-    \caption{Diagramm einer einzelnen Periodendauer für Helium gegen die Anzahl der Perioden mit logarithmischer $x$-Achse, gewichtetem Mittelwert (Farbe) und Unsicherheiten (vertikale Balken)}
+    \caption{Diagramm einer einzelnen Periodendauer für Helium gegen die Anzahl der Perioden mit logarithmischer $x$-Achse, gewichtetem Mittelwert (lila) und Unsicherheiten (vertikale Balken)}
     \label{fig:helium-periodendauer}
 \end{figure}
 
@@ -234,7 +232,7 @@ Auch hier arbeiten wir mit Gleichung (5), um die Freiheitsgrade $f_{\mathrm{He}}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{abb07_gamma_freiheitsgrade_helium.jpg}
-    \caption{Adiabatenexponent gegen die Anzahl der Freiheitsgrade mit theoretischem Wert nach gegebener Formel (blau) und dem durch unsere Messungen berechneten (rot)}
+    \caption{Adiabatenexponent gegen die Anzahl der Freiheitsgrade mit theoretischem Wert nach gegebener Formel (rosa) und dem durch unsere Messungen berechneten (lila)}
     \label{fig:gamma-f-helium}
 \end{figure}
 
@@ -243,19 +241,19 @@ Es befindet sich kein ganzzahliger Wert $\gamma_f$ auf unserer Geraden für $\ga
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{abb08_zwerte_helium.jpg}
-    \caption{$z$-Werte für die jeweiligen $\gamma_f$ (grün) mit Signifikanzniveau $|z|=2$ (rot)}
+    \caption{$z$-Werte für die jeweiligen $\gamma_f$ (rosa) mit Signifikanzniveau $|z|=2$ (lila)}
     \label{fig:z-helium}
 \end{figure}
 
 Es fällt auf, dass ebenfalls keiner der $\gamma_f$-Werte unterhalb des Signifikanzniveaus liegt, also kein Wert mit unserem Ergebnis für $\gamma_{\mathrm{He}}$ verträglich ist.
 
-Die Freiheitsgrade $f=3,4$ liegen hierbei am nächsten zu $|z|=2$. Da in beiden Messungen keiner der Adiabatenexponenten mit einem Freiheitsgrad übereinstimmt, ist naheliegend, dass ein unbeachteter systematischer Fehler unsere Ergebnisse verfälscht.
+Die Werte der Freiheitsgrade $f_He=3\, \text{und} \,4$ liegen hierbei am nächsten zu $|z|=2$. Da in beiden Messungen keiner der Adiabatenexponenten mit einem Freiheitsgrad übereinstimmt, ist naheliegend, dass ein unbeachteter systematischer Fehler unsere Ergebnisse verfälscht.
 
 \subsection{Fehlerfortpflanzung}
 
 \subsubsection{Fehlerfortpflanzung von $\gamma_L$}
 
-Wir verwenden die Gauß'sche Fehlerfortpflanzung (Gleichung (7)) mit $T=\bar{T}_L$, um den Fehler von $\gamma_L$ zu bestimmen. Wir haben Unsicherheiten auf allen Parametern und benötigen fünf Fehlerterme unter der Wurzel (Gleichung (8) und folgende).
+Wir verwenden die Gauß'sche Fehlerfortpflanzung (\cref{eq:GaussFehler}) mit $T=\bar{T}_L$, um den Fehler von $\gamma_L$ zu bestimmen. Wir haben Unsicherheiten auf allen Parametern und benötigen fünf Fehlerterme unter der Wurzel.
 
 Wir erhalten:
 \[
@@ -266,7 +264,7 @@ Dabei dominieren der $V$-Term $=4\cdot10^{-5}$ und der $d$-Term $=7\cdot10^{-5}$
 
 \subsubsection{Fehlerfortpflanzung von $\gamma_{\mathrm{He}}$}
 
-$\Delta\gamma_{\mathrm{He}}$ wird wie $\Delta\gamma_L$ aus Gleichung (7) berechnet, allerdings mit $T=\bar{T}_{\mathrm{He}}$.
+$\Delta\gamma_{\mathrm{He}}$ wird mit derselben Formel wie $\Delta\gamma_L$ in \cref{eq:GaussFehler} berechnet, allerdings mit $T=\bar{T}_{\mathrm{He}}$.
 
 Wir erhalten auch für Helium:
 \[
@@ -300,34 +298,31 @@ $
 
 Da es sich bei Luft um hauptsächlich mehratomige Gase handelt (Stickstoff, Sauerstoff), sollte es ungefähr $f=5$ Freiheitsgrade geben. Bei Helium handelt es sich um ein einatomiges Edelgas mit den Freiheitsgraden $f=3$.\footnote{\url{https://www.tec-science.com/de/thermodynamik-waermelehre/kinetische-gastheorie/innere-energie-molare-warmekapazitat/}, zuletzt aufgerufen: 24.09.2026, 11:30 Uhr}
 
-Unsere Werte weichen signifikant von den Literaturwerten ab
-$
-|z|_L=5>2,\qquad |z|_{\mathrm{He}}=9>2.
-$
+Unsere Werte weichen signifikant von den Literaturwerten ab $|z|_L=5>2,\, |z|_{\mathrm{He}}=9>2.$
 Obwohl keiner unserer errechneten Adiabatenexponenten zu einem Freiheitsgrad passt, lässt sich im Graphen ablesen, dass die literarischen Freiheitsgrade am ehesten zu unseren Werten passen.
 
-Das signifikante Abweichen könnte an mehreren Faktoren liegen. Zum einen haben wir nicht nach dem ersten Messen den Glaskolben durchgespült, wodurch vor allem der ausfallende Wert aus Abb. 9 erklärt wäre. Dieser ist nämlich vor der Durchspülung aufgezeichnet worden. Zudem könnte ein Fehler bei der Druckmessung passiert sein. Der Luftdruck zum Zeitpunkt der Messung war laut dem Meteorologischen Institut Freiburg\footnote{\url{https://weather.uni-freiburg.de/}} bei ca. $\SI{102400}{Pa}$, etwas höher als der von uns gemessene Wert
+Das signifikante Abweichen könnte an mehreren Faktoren liegen. Zum einen haben wir nach dem ersten Messen nicht den Glaskolben durchgespült, wodurch vor allem der ausfallende Wert aus Abb. 9 erklärt wäre. Dieser ist nämlich vor der Durchspülung aufgezeichnet worden. Zudem könnte ein Fehler bei der Messung des Umgebungsdrucks passiert sein. Der Luftdruck zum Zeitpunkt der Messung war laut dem Meteorologischen Institut Freiburg\footnote{\url{https://weather.uni-freiburg.de/}} bei ca. $\SI{102400}{Pa}$, etwas höher als der von uns gemessene Wert
 $
 p_L=(99050\pm20)\,\si{\pascal}.
 $
-Rechnet man mit dem Luftdruck des Meteorologischen Instituts, liegt unser Ergebnis für $\gamma_L$ innerhalb des Signifikanzniveaus. [Referenz in den Anhang zu den Diagrammen]
+Rechnet man mit dem Luftdruck des Meteorologischen Instituts, liegt unser Ergebnis für $\gamma_L$ innerhalb des Signifikanzniveaus, siehe \cref{fig:anhang_Luft1} und \cref{fig:anhang_Luft2}.
 
 \subsection{Störeinflüsse}
 
 \begin{itemize}
     \item Wir können nicht sicherstellen, dass vor dem Befüllen des Kolbens mit Helium die Luft vollständig ausgespült wurde. Das hätte zur Folge, dass wir nicht mit reinem Helium, sondern einem Helium-Luft-Gemisch gearbeitet haben.
-    \item Es ist möglich, dass Reibung des Schwingkörpers an der Innenwand des Präzisionsrohrs die Periodendauer beeinflusst.
-    \item Der Luftdruck oder die Temperatur werden im Versuchsaufbau als konstant angenommen. Allerdings könnten durch offene Fenster die Temperatur und der Luftdruck schwanken, wodurch das Ergebnis verfälscht wird.
+    \item Es ist möglich, dass die Reibung des Schwingkörpers an der Innenwand des Präzisionsrohrs die Periodendauer beeinflusst.
+    \item Der Luftdruck und die Temperatur werden im Versuchsaufbau aus Schenk, Physikalisches Praktikum , Seite 132-137 für die Herleitungen der Formeln als konstant angenommen. Allerdings könnten durch offene Fenster die Temperatur und der Luftdruck schwanken, wodurch das Ergebnis verfälscht wird. Zudem befindet sich das Barometer in einem anderen Raum, was zusätzlich für einen Fehler in der Abmessung sorgen könnte.
 \end{itemize}
 
 \subsection{Verbesserungsvorschläge}
 
-Wir haben einige Verbesserungsvorschläge gesammelt, um eine präzisere Messung zu ermöglichen.
+Wir haben einige Verbesserungsvorschläge gesammelt, um eine präzisere Messung zu ermöglichen:
 
 \begin{itemize}
-    \item Eine große Ungenauigkeit entsteht durch die $T$-Messung. Zur Verbesserung würden ein Messgerät mit höherer Auflösung sowie ein automatisches Stoppen der Uhr, z.\,B. durch eine Lichtschranke, beitragen. Durch die Lichtschranke wäre auch das Stoppen der Uhr zur immer gleichen Phase der Schwingung gewährleistet.
+    \item Eine Ungenauigkeit entsteht durch die $T$-Messung. Zur Verbesserung würden ein Messgerät mit höherer Auflösung sowie ein automatisches Stoppen der Uhr, z.\,B. durch eine Lichtschranke, beitragen. Durch die Lichtschranke wäre auch das Stoppen der Uhr zur immer gleichen Phase gewährleistet.
     \item Es könnte außerdem ein Schwingkörper mit geringerer Seitenfläche verwendet werden, um die Reibung an den Wänden zu reduzieren.
-    \item Da Temperatur und Luftdruck eine Rolle in diesem Experiment spielen, könnte man mit einem gut isolierten Raum diese Störfaktoren minimieren.
+    \item Da Temperatur und Luftdruck eine Rolle in diesem Experiment spielen, könnte man mit einem gut isolierten Raum diese Störfaktoren minimieren, und alle Messungen innerhalb dieses Raumes stattfinden.
 \end{itemize}
 
 \section{Autorenschaft}
@@ -339,21 +334,55 @@ Alle Autoren haben zu allen Inhalten des Protokolls zu gleichen Teilen beigetrag
 
 \subsection{Gauß'scher Fehler für $\gamma_L$}
 
-Die allgemeine Formel lautet
-
-Mit
+Mit der allgemeinen Formel
+\label{eq:GaussFehler}
+\begin{equation*}
+  \Delta f = \sqrt{\left(\frac{\partial f}{\partial m}\,\Delta m\right)^2+\left(\frac{\partial f}{\partial g}\,\Delta g\right)^2+\left(\frac{\partial f}{\partial V}\,\Delta V\right)^2+\left(\frac{\partial f}{\partial d}\,\Delta d\right)^2+\left(\frac{\partial f}{\partial p_{L}}\,\Delta p_{L}\right)^2+\left(\frac{\partial f}{\partial T}\,\Delta T\right)^2}}
+\end{equation*}
 
 ergibt sich nach Einsetzen der Größen
+\begin{equation*}
+  = (\left(\left(\frac{64 V}{T^{2} d^{4} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)} - \frac{81.49 V g m}{T^{2} d^{6} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)^{2}}\right)\,\Delta m\right)^2+\left(- \frac{81.49 V m^{2}}{T^{2} d^{6} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)^{2}}\,\Delta g\right)^2
+  \end{equation*}
+
+\begin{equation*}
+  +\left(\frac{64 m}{T^{2} d^{4} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)}\,\Delta V\right)^2+\left(\left(- \frac{256 V m}{T^{2} d^{5} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)} + \frac{162.97 V g m^{2}}{T^{2} d^{7} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)^{2}}\right)\,\Delta d\right)^2
+  \end{equation*}
+
+\begin{equation*}
+  +\left(- \frac{64 V m}{T^{2} d^{4} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)^{2}}\,\Delta p_{L}\right)^2+\left(- \frac{128 V m}{T^{3} d^{4} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)}\,\Delta T\right)^2)^{\frac{1}{2}}}=0,01.
+\end{equation*}
 
 
 Einzelne Fehlerterme für Dominanzverhalten:
-\begin{equation*}\Delta f = \sqrt{\left(\frac{\partial f}{\partial m}\,\Delta m\right)^2+\left(\frac{\partial f}{\partial g}\,\Delta g\right)^2+\left(\frac{\partial f}{\partial V}\,\Delta V\right)^2+\left(\frac{\partial f}{\partial d}\,\Delta d\right)^2+\left(\frac{\partial f}{\partial p_{L}}\,\Delta p_{L}\right)^2+\left(\frac{\partial f}{\partial T}\,\Delta T\right)^2}} \end{equation*}
+
 \begin{equation*}
-  
-\end{equation*}= \sqrt{\left(\frac{64 V}{T^{2} d^{4} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)} - \frac{81.49 V g m}{T^{2} d^{6} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)^{2}}\,\Delta m\right)^2+\left(- \frac{81.49 V m^{2}}{T^{2} d^{6} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)^{2}}\,\Delta g\right)^2+\left(\frac{64 m}{T^{2} d^{4} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)}\,\Delta V\right)^2+\left(- \frac{256 V m}{T^{2} d^{5} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)} + \frac{162.97 V g m^{2}}{T^{2} d^{7} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)^{2}}\,\Delta d\right)^2+\left(- \frac{64 V m}{T^{2} d^{4} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)^{2}}\,\Delta p_{L}\right)^2+\left(- \frac{128 V m}{T^{3} d^{4} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)}\,\Delta T\right)^2}}\end{equation*}
+  m-Term =\left(\left(\frac{64 V}{T^{2} d^{4} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)} - \frac{81.49 V g m}{T^{2} d^{6} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)^{2}}\right)\,\Delta m\right)^2=2\cdot10^{-6}
+\end{equation*}
+
+\begin{equation*}
+  g-Term =\left(- \frac{81.49 V m^{2}}{T^{2} d^{6} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)^{2}}\,\Delta g\right)^2=3\cdot10^{-13}
+\end{equation*}
+
+\begin{equation*}
+  V-Term =\left(\frac{64 m}{T^{2} d^{4} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)}\,\Delta V\right)^2=4\cdot10^{-5}
+\end{equation*}
+
+\begin{equation*}
+  d-Term =\left(\left(- \frac{256 V m}{T^{2} d^{5} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)} + \frac{162.97 V g m^{2}}{T^{2} d^{7} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)^{2}}\right)\,\Delta d\right)^2=7\cdot10^{-5}
+\end{equation*}
+
+\begin{equation*}
+  p_L-Term =\left(- \frac{64 V m}{T^{2} d^{4} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)^{2}}\,\Delta p_{L}\right)^2=8\cdot10^{-8}
+\end{equation*}
+
+\begin{equation*}
+  T-Term =\left(- \frac{128 V m}{T^{3} d^{4} \left(p_{L} + \frac{1.27 g m}{d^{2}}\right)}\,\Delta T\right)^2)^{\frac{1}{2}}=3\cdot10^{-7}
+\end{equation*}
+
 \subsection{Gauß'scher Fehler für $\gamma_{\mathrm{He}}$}
 
-Einzelne Fehlerterme für Dominanzverhalten (gleiche Formeln wie Gleichung (8) und folgende):
+Einzelne Fehlerterme für Dominanzverhalten (gleiche Formeln wie \cref{eq:GaussFehler}):
 \begin{align*}
 m\text{-Term} &=2\cdot10^{-6},&
 V\text{-Term} &=5\cdot10^{-5},&
@@ -367,7 +396,6 @@ g\text{-Term} &=4\cdot10^{-13}.
 
 \begin{table}[H]
 \centering
-\caption{Periodendauern Luft für unterschiedliche $n$}
 \begin{tabular}{rrr}
 \toprule
 Perioden $n$ & Dauer (s) & Periodendauer (s)\\
@@ -384,11 +412,11 @@ Perioden $n$ & Dauer (s) & Periodendauer (s)\\
 1000 & 392,70 & 0,3927\\
 \bottomrule
 \end{tabular}
+  \caption{Periodendauern Luft für unterschiedliche $n$}
 \end{table}
 
 \begin{table}[H]
 \centering
-\caption{Periodendauern He für unterschiedliche $n$}
 \begin{tabular}{rrr}
 \toprule
 Perioden $n$ & Dauer (s) & Periodendauer (s)\\
@@ -405,23 +433,43 @@ Perioden $n$ & Dauer (s) & Periodendauer (s)\\
 1000 & 371,48 & 0,37148\\
 \bottomrule
 \end{tabular}
+  \caption{Periodendauern He für unterschiedliche $n$}
 \end{table}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{abb09_KORRIGIERT_gamma_freiheitsgrade_luft.jpg}
-    \caption{HILFE}
+    \caption{theoretischer Wert $\gamma_L$ (blau) mit unseren korrigierten Wert für $\gamma_L$ mit $p_L = 102400 Pa$ (rot). Freiheitsgrad liegt auf Gerade}
     \label{fig:anhang_Luft1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{abb10_KORRIGIERT_zwerte_luft.jpg}
-    \caption{HILFE}
+    \caption{jeweiliger $z$-Wert für theoretische Werte $\gamma_L$ mit Signifikanzniveau $|z| = 2$ (rot). Ein $z$-Wert liegt unter dem Signifikanzniveau.}
     \label{fig:anhang_Luft2}
 \end{figure}
-
-\newpage
+ 
 \section{Labornotizen}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Laborbuch v36 -1.jpg}
+    \caption{Laborbuch 1}
+    \label{fig:Laborbuch1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Laborbuch v36 -2.jpg}
+    \caption{Laborbuch 2}
+    \label{fig:Laborbuch2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Laborbuch v36 -3.jpg}
+    \caption{Laborbuch 3}
+    \label{fig:Laborbuch3}
+\end{figure}
 
 \end{document}
